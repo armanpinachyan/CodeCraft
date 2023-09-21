@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@300;400;700&display=swap");
 ::-webkit-scrollbar {
   width: 5px;
   height: 8px;
@@ -27,7 +28,7 @@
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: "Mabry Pro";
+  font-family: "Noto Sans Armenian", sans-serif;
 }
 
 a {
@@ -57,67 +58,43 @@ a {
   --white: #FFf;
 }
 
-.container {
-  max-width: 1440px;
+body {
+  background: linear-gradient(173deg, #B51160 0%, #A60EDB 98.84%) center no-repeat;
+  background-size: cover;
+}
+@media (max-width: 992px) {
+  body {
+    padding: 0 30px 0 30px;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    padding: 0 25px 0 25px;
+  }
+}
+
+.ball-yellow {
+  position: absolute;
+  z-index: -23;
+  left: 0;
+  top: 0;
+  width: 90vw;
+}
+
+.body-content {
+  max-width: 1200px;
   width: 100%;
-}
-
-.count {
-  background: var(--orange);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  margin-top: 90px;
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 141.5%; /* 22.64px */
-}
-@media (max-width: 576px) {
-  .count {
-    display: none;
-  }
-}
-
-@font-face {
-  font-family: "Mabry Pro";
-  src: url("../font/MabryPro-Bold.eot");
-  src: local("Mabry Pro Bold"), local("MabryPro-Bold"), url("../font/MabryPro-Bold.eot?#iefix") format("embedded-opentype"), url("../font/MabryPro-Bold.woff2") format("woff2"), url("../font/MabryPro-Bold.woff") format("woff"), url("../font/MabryPro-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Mabry Pro";
-  src: url("../font/MabryPro-Regular.eot");
-  src: local("Mabry Pro"), local("MabryPro-Regular"), url("../font/MabryPro-Regular.eot?#iefix") format("embedded-opentype"), url("../font/MabryPro-Regular.woff2") format("woff2"), url("../font/MabryPro-Regular.woff") format("woff"), url("../font/MabryPro-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-display: swap;
-}
-.btn-orange {
-  color: #FFF;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 122.5%;
-  background: var(--orange);
   border-radius: 30px;
-  padding: 18px 37px;
+  border: 5px solid #FFF;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(7.5px);
+  margin: 115px auto 150px auto;
+  padding: 0 0 280px 0;
 }
-@media (max-width: 768px) {
-  .btn-orange {
-    font-size: 20px;
-    padding: 16px 34px;
-  }
-}
-@media (max-width: 576px) {
-  .btn-orange {
-    font-size: 19px;
-    padding: 15px 32px;
-  }
+
+.container {
+  max-width: 984px;
+  width: 100%;
 }
 
 .fix-button {
@@ -141,16 +118,96 @@ a {
 }
 .fix-button span {
   color: #000;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 141.5%;
 }
 .fix-button .fix-button-btn {
   background: transparent;
   color: var(--orange);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 141.5%; /* 22.64px */
+}
+
+.menu {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  max-width: 1200px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  z-index: 1000;
+}
+.menu.active {
+  border-radius: 100px;
+  border: 1px solid #FFF;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(17.5px);
+}
+.menu.active .logo {
+  transform: scale(0.8);
+  top: 50px !important;
+}
+.menu .menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .menu .menu-item {
+    display: none;
+  }
+}
+.menu .menu-item .logo {
+  position: relative;
+  top: 72px;
+  margin: 0 20px;
+}
+.menu .menu-item ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu .menu-item ul li {
+  margin-right: 2.8125rem;
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+.menu .menu-item ul li:last-child {
+  margin-right: 0;
+}
+
+header .col-box .heading-header {
+  margin-top: 140px;
+  color: #000;
+  font-size: 3.4375rem;
+  font-weight: 600;
+  line-height: 3.875rem; /* 120% */
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+header .col-box .header-subtitle {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+header .col-box .btn-header {
+  margin-top: 35px;
+  padding: 8px 30px;
+  color: #FFF;
+  font-size: 1.25rem;
+  font-weight: 300;
+  border-radius: 30px;
+  background: linear-gradient(92deg, #A60EDB 1.64%, #B51160 99.59%);
 }
 
 /*# sourceMappingURL=style.css.map */

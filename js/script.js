@@ -29,70 +29,87 @@ $('.gradient-card-running-line').each((index, elem) => {
 
 })
 
-const slider = $('.rich-commercial-slider');
 
-slider.slick({
-    centerMode: true,
-    // prevArrow: $('#prev'),
-    // nextArrow: $('#next'),
-    centerPadding: '450px',
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    speed: 1000,
-    autoplay: true,
-    responsive: [
-        {
-            breakpoint: 1352,
-            settings: {
-                centerPadding: '350px',
-            }
-        },
-        {
-            breakpoint: 1100,
-            settings: {
-                centerPadding: '250px',
-            }
-        },
-        {
-            breakpoint: 850,
-            settings: {
-                centerPadding: '150px',
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                centerPadding: '100px',
-            }
-        },
-        {
-            breakpoint: 576,
-            settings: {
-                centerPadding: '50px',
-            }
-        },
-    ]
-});
+// ....... Menu
 
 
-
-$(".fix-top").click(function() {
-    $("html, body").animate({ scrollTop: 0 }, "smoth");
-    return false;
-});
-
-
-const logo_number = document.querySelector('.logo-number')
+const menu = document.querySelector('.menu')
 
 window.addEventListener('scroll', (e)=>{
     const scroly = window.scrollY;
     if(scroly >= 10){
-        logo_number.classList.remove('active')
+        menu.classList.add('active')
     } else if(scroly <= 10){
-        logo_number.classList.add('active')
+        menu.classList.remove('active')
     }
 })
+
+
+
+// const slider = $('.rich-commercial-slider');
+//
+// slider.slick({
+//     centerMode: true,
+//     // prevArrow: $('#prev'),
+//     // nextArrow: $('#next'),
+//     centerPadding: '450px',
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     infinite: true,
+//     speed: 1000,
+//     autoplay: true,
+//     responsive: [
+//         {
+//             breakpoint: 1352,
+//             settings: {
+//                 centerPadding: '350px',
+//             }
+//         },
+//         {
+//             breakpoint: 1100,
+//             settings: {
+//                 centerPadding: '250px',
+//             }
+//         },
+//         {
+//             breakpoint: 850,
+//             settings: {
+//                 centerPadding: '150px',
+//             }
+//         },
+//         {
+//             breakpoint: 768,
+//             settings: {
+//                 centerPadding: '100px',
+//             }
+//         },
+//         {
+//             breakpoint: 576,
+//             settings: {
+//                 centerPadding: '50px',
+//             }
+//         },
+//     ]
+// });
+//
+//
+
+// $(".fix-top").click(function() {
+//     $("html, body").animate({ scrollTop: 0 }, "smoth");
+//     return false;
+// });
+//
+//
+// const logo_number = document.querySelector('.logo-number')
+//
+// window.addEventListener('scroll', (e)=>{
+//     const scroly = window.scrollY;
+//     if(scroly >= 10){
+//         logo_number.classList.remove('active')
+//     } else if(scroly <= 10){
+//         logo_number.classList.add('active')
+//     }
+// })
 
 
 
