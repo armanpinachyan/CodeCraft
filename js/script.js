@@ -34,16 +34,69 @@ $('.gradient-card-running-line').each((index, elem) => {
 
 
 const menu = document.querySelector('.menu')
+const yellow = document.querySelector('.yellow')
+const green = document.querySelector('.green')
+const purple = document.querySelector('.purple')
+
+window.onload = () => {
+    setTimeout(() => {
+        yellow.classList.add('active')
+        green.classList.add('active')
+        purple.classList.add('active')
+
+        setTimeout(()=>{
+            yellow.classList.add('no-trans')
+            green.classList.add('no-trans')
+            purple.classList.add('no-trans')
+        },300)
+
+        const tl = gsap.timeline({ease: "slow", duration: 1})
+        document.addEventListener("mousemove", e => {
+            gsap.utils.toArray(".circle").forEach(layer => {
+                const depth = layer.dataset.depth;
+                const moveX = ((e.pageX)-(window.innerWidth/2));
+                const moveY = ((e.pageY)-(window.innerHeight/2));
+                tl.to(layer, {
+                    x: moveX/depth,
+                    y: moveY/depth,
+                    rotate: 15
+                }, 0);
+            });
+        });
+    }, 1500)
+}
+
 
 window.addEventListener('scroll', (e)=>{
     const scroly = window.scrollY;
     if(scroly >= 10){
         menu.classList.add('active')
+        // yellow.classList.add('active')
+        // green.classList.add('active')
+        // purple.classList.add('active')
     } else if(scroly <= 10){
         menu.classList.remove('active')
+       // yellow.classList.remove('active')
+        // green.classList.remove('active')
+        // purple.classList.remove('active')
     }
 })
 
+
+
+const mobileMenBoard = document.querySelector('.mobile-menu-board');
+const menuItemMobile = document.querySelector('.menu-item-mobile');
+mobileMenBoard.addEventListener('click', function (){
+    if(this.classList.contains(active)){
+        this.classList.remove(active);
+        menuItemMobile.classList.remove(active);
+        document.body.style.overflow = null;
+    } else {
+        this.classList.add(active);
+        menuItemMobile.classList.add(active);
+        document.body.style.overflow = 'hidden';
+    }
+})
 
 
 // const slider = $('.rich-commercial-slider');

@@ -130,11 +130,34 @@ body {
   line-height: 141.5%; /* 22.64px */
 }
 
+.dropdown-flag {
+  background: transparent !important;
+}
+.dropdown-flag button {
+  background: transparent;
+  border: none;
+}
+.dropdown-flag button:active {
+  background: transparent !important;
+}
+.dropdown-flag button:hover {
+  background: transparent !important;
+}
+.dropdown-flag .dropdown-menu {
+  background: transparent;
+  width: 20px !important;
+}
+.dropdown-flag .dropdown-menu img {
+  display: block;
+  width: 25px;
+  margin: 10px;
+}
+
 .menu {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  top: 0;
+  top: 10px;
   max-width: 1200px;
   width: 100%;
   height: 80px;
@@ -143,15 +166,104 @@ body {
   background: transparent;
   z-index: 1000;
 }
+.menu .logo {
+  transition: 0.2s linear;
+}
 .menu.active {
   border-radius: 100px;
   border: 1px solid #FFF;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(17.5px);
 }
+@media (max-width: 992px) {
+  .menu.active {
+    top: 0;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    backdrop-filter: blur(17.5px);
+  }
+}
 .menu.active .logo {
   transform: scale(0.8);
-  top: 50px !important;
+  top: 40px !important;
+}
+.menu .menu-item2 {
+  display: none;
+}
+@media (max-width: 992px) {
+  .menu .menu-item2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu .menu-item2 .logo {
+    transform: scale(0.3);
+  }
+}
+.menu .menu-item2 .mobile-menu-board {
+  width: 30px;
+  height: 40px;
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media (max-width: 992px) {
+  .menu .menu-item2 .mobile-menu-board {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    left: -35px;
+  }
+}
+.menu .menu-item2 .mobile-menu-board.active span:nth-of-type(1) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 10px;
+}
+.menu .menu-item2 .mobile-menu-board.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.menu .menu-item2 .mobile-menu-board.active span:nth-of-type(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: -10px;
+}
+.menu .menu-item2 .mobile-menu-board span {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 100%;
+  height: 2px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  background-color: #000;
+  position: relative;
+}
+.menu .menu-item2 .mobile-menu-board span:last-child {
+  margin: 0;
+}
+.menu .menu-item2 .mobile-menu-board span:nth-of-type(1) {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  top: 0;
+}
+.menu .menu-item2 .mobile-menu-board span:nth-of-type(2) {
+  opacity: 1;
+}
+.menu .menu-item2 .mobile-menu-board span:nth-of-type(3) {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  top: 0;
 }
 .menu .menu-item {
   display: flex;
@@ -186,8 +298,49 @@ body {
   margin-right: 0;
 }
 
-header .col-box .heading-header {
+.menu-item-mobile {
+  position: fixed;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(7.5px);
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: 0.2s linear;
+  z-index: 100;
+  display: none;
+}
+@media (max-width: 992px) {
+  .menu-item-mobile {
+    display: initial;
+  }
+}
+.menu-item-mobile.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.menu-item-mobile ul {
+  text-align: center;
+  list-style: none;
+  padding-left: 0;
+}
+.menu-item-mobile ul li {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin: 15px 0;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+}
+
+header .col-box {
+  width: 100%;
+  height: 100%;
   margin-top: 140px;
+  position: relative;
+}
+header .col-box .heading-header {
   color: #000;
   font-size: 3.4375rem;
   font-weight: 600;
@@ -208,6 +361,62 @@ header .col-box .btn-header {
   font-weight: 300;
   border-radius: 30px;
   background: linear-gradient(92deg, #A60EDB 1.64%, #B51160 99.59%);
+}
+header .col-box .yellow {
+  position: absolute;
+  left: 100px;
+  top: 10px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #F90;
+  transition: 0.3s linear;
+  z-index: -1;
+}
+header .col-box .yellow.active {
+  left: 0;
+  top: -60px;
+}
+header .col-box .yellow.no-trans {
+  transition: unset !important;
+}
+header .col-box .purple {
+  position: absolute;
+  left: 98px;
+  top: 8px;
+  z-index: -1;
+  width: 314px;
+  height: 440px;
+  transform: rotate(0);
+  border-radius: 30px;
+  background: #C529FC;
+  transition: 0.3s linear;
+}
+header .col-box .purple.active {
+  transform: rotate(15deg);
+  left: 105px;
+  top: 0;
+}
+header .col-box .purple.no-trans {
+  transition: unset !important;
+}
+header .col-box .green {
+  position: absolute;
+  right: 60px;
+  bottom: 150px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #287B67;
+  transition: 0.3s linear;
+  z-index: -1;
+}
+header .col-box .green.active {
+  right: -20px;
+  bottom: 70px;
+}
+header .col-box .green.no-trans {
+  transition: unset !important;
 }
 
 /*# sourceMappingURL=style.css.map */
