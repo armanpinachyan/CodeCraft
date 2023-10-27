@@ -81,6 +81,42 @@ body {
   width: 90vw;
 }
 
+.box-heading {
+  width: 100%;
+  height: 5rem;
+  border-radius: 100px 0;
+  background: linear-gradient(90deg, #B51160, #FBB707, #F6254B);
+  position: relative;
+}
+.box-heading:before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 8px);
+  height: calc(100% - 6px);
+  background: #fff;
+  border-radius: 124px 0;
+  left: 4px;
+  top: 3px;
+  margin: 0;
+  padding: 0;
+}
+.box-heading h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 72px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  background: linear-gradient(91deg, #F6254B 0.31%, #A60EDB 103.33%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
 .body-content {
   max-width: 1200px;
   width: 100%;
@@ -417,6 +453,105 @@ header .col-box .green.active {
 }
 header .col-box .green.no-trans {
   transition: unset !important;
+}
+
+.choose-us {
+  margin-top: 8.9375rem;
+}
+@media (max-width: 992px) {
+  .choose-us {
+    margin-top: 6rem;
+  }
+}
+@media (max-width: 576px) {
+  .choose-us {
+    margin-top: 4.125rem;
+  }
+}
+.choose-us-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.choose-us-box-image {
+  border-radius: 15px;
+  position: relative;
+}
+.choose-us-box-image .choose-green {
+  position: absolute;
+  left: 25px;
+  top: 0;
+  width: 93%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 15px;
+  background: #2BBE9B;
+  transform: rotate(0);
+  transition: 0.4s;
+}
+.choose-us-box-image .choose-green.active {
+  left: 0;
+  top: 20px;
+  transform: rotate(10.003deg);
+}
+.choose-us-box-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.choose-us-box p {
+  color: #FFF;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 350;
+  line-height: normal;
+  letter-spacing: 0.64px;
+}
+.choose-us-box p span {
+  font-weight: 600;
+}
+
+.contact {
+  margin-top: 3.625rem;
+}
+@media (max-width: 576px) {
+  .contact {
+    margin-top: 2rem;
+  }
+}
+.contact-box .ando {
+  width: 100%;
+  height: 100%;
+}
+.contact-box .name {
+  color: #FFF;
+  font-size: 2.5rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.contact-box .position {
+  color: #FFF;
+  font-size: 1.875rem;
+  font-weight: 400;
+  letter-spacing: 6px;
+  margin-bottom: 3.75rem;
+}
+.contact-box-numbers a {
+  display: block;
+  color: #FFF;
+  font-size: 1.875rem;
+  font-weight: 400;
+  letter-spacing: 6px;
+}
+
+.preparation {
+  margin-top: 10.3125rem;
+}
+@media (max-width: 576px) {
+  .preparation {
+    margin-top: 5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

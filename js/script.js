@@ -54,8 +54,8 @@ window.onload = () => {
         document.addEventListener("mousemove", e => {
             gsap.utils.toArray(".circle").forEach(layer => {
                 const depth = layer.dataset.depth;
-                const moveX = ((e.pageX)-(window.innerWidth/2));
-                const moveY = ((e.pageY)-(window.innerHeight/2));
+                const moveX = ((e.pageX)-(window.innerWidth/2)) / 3;
+                const moveY = ((e.pageY)-(window.innerHeight/2) / 3);
                 tl.to(layer, {
                     x: moveX/depth,
                     y: moveY/depth,
@@ -71,17 +71,20 @@ window.addEventListener('scroll', (e)=>{
     const scroly = window.scrollY;
     if(scroly >= 10){
         menu.classList.add('active')
-        // yellow.classList.add('active')
-        // green.classList.add('active')
-        // purple.classList.add('active')
     } else if(scroly <= 10){
         menu.classList.remove('active')
-       // yellow.classList.remove('active')
-        // green.classList.remove('active')
-        // purple.classList.remove('active')
     }
 })
 
+
+const choose_green = $('#choose-green').offset().top
+
+
+ScrollTrigger.create({
+    start: `top -${choose_green - 400}`,
+    end: 9999,
+    toggleClass: {className: 'active', targets: '.choose-green '},
+});
 
 
 const mobileMenBoard = document.querySelector('.mobile-menu-board');
