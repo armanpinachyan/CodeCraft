@@ -66,15 +66,15 @@ window.onload = () => {
     }, 1500)
 }
 
-
-window.addEventListener('scroll', (e)=>{
+$(window).on('scroll', ()=>{
     const scroly = window.scrollY;
     if(scroly >= 10){
         menu.classList.add('active')
     } else if(scroly <= 10){
         menu.classList.remove('active')
     }
-})
+}).scroll()
+
 
 
 const choose_green = $('#choose-green').offset().top
@@ -100,6 +100,243 @@ mobileMenBoard.addEventListener('click', function (){
         document.body.style.overflow = 'hidden';
     }
 })
+
+
+//. Works
+
+const Works  = [
+    {
+        name: "Sdney",
+        imgUrl: '',
+        links: {
+            link: 'index.html'
+        },
+        created: 'HTML CSS JAVASCRIPT'
+    },
+    {
+        name: "Aniox",
+        imgUrl: '',
+        links: [
+            'confirm-email.html',
+            'email.html',
+            'index.html',
+            'finish.html',
+            'login.html',
+            'new-ticket.html',
+            'robo.html',
+            'steps.html',
+            'ticket.html',
+            'ticket-message.html',
+            'trial.html',
+
+        ],
+        created: 'HTML CSS JAVASCRIPT'
+    },
+    {
+        name: "Lagom",
+        imgUrl: '',
+        links: [
+            'index.html',
+
+        ],
+        created: 'HTML CSS JAVASCRIPT'
+    },
+    {
+        name: "Artel",
+        imgUrl: '',
+        links: [
+            'index.html',
+
+        ],
+        created: 'HTML CSS JAVASCRIPT'
+    },
+    {
+        name: "Arthall-Synergy",
+        imgUrl: '',
+        links: [
+            'index.html',
+
+        ],
+        created: 'HTML CSS JAVASCRIPT'
+    },
+    {
+        name: "RimPlitka",
+        imgUrl: '',
+        links: [
+            'index.html',
+
+        ],
+        created: 'HTML CSS JAVASCRIPT'
+    },
+    {
+        name: "Arthall",
+        imgUrl: '',
+        links: [
+            'applications-for-participation.html',
+            'art-critic-profile.html',
+            'art-critics.html',
+            'art-dealer-profile.html',
+            'artist-profile.html',
+            'dealers.html',
+            'exhibition-space-profile.html',
+            'index.html',
+            'inserts.html',
+            'sign-up.html',
+
+        ],
+        created: 'HTML SCSS Bootstrap JAVASCRIPT'
+    },
+    {
+        name: "Arthall-Synergy",
+        imgUrl: '',
+        links: [
+            'index.html',
+
+        ],
+        created: 'HTML CSS JAVASCRIPT'
+    },
+    {
+        name: "Max-Asfalt",
+        imgUrl: '',
+        links: [
+            'index.html',
+
+        ],
+        created: 'HTML CSS JAVASCRIPT'
+    },
+    {
+        name: "Easy Card",
+        imgUrl: '',
+        links: [
+            'index.html',
+            'bakai-card.html',
+            'freedom-card.html',
+            'kazakhstan.html',
+            'kirghizia.html',
+            'optimal-card.html',
+
+        ],
+        created: 'HTML CSS JAVASCRIPT'
+    },
+    {
+        name: "Neural-Network",
+        imgUrl: '',
+        links: [
+            'index.html',
+            'widgets.html',
+            'Classification-of-skin-diseases.html',
+            'contacts.html',
+            'Definition-of-baggage-security.html',
+            'definition-of-hand-gestures.html',
+            'Detection-of-free-parking-spaces.html',
+            'fixing-the-movement-of-people.html',
+            'neural-network-capabilities.html',
+            'recognition-of-emotions-in-photo.html',
+            'Removing-people-from-a-video.html',
+            'Segmentation-bacteria-under-the-microscope.html',
+            'segmentation-of-people-in-the-photo.html',
+            'services.html',
+            'Trash-detection.html',
+            'widget.html'
+        ],
+        created: 'HTML CSS JAVASCRIPT'
+    },
+    {
+        name: "Kupon",
+        imgUrl: '',
+        links: [
+            'index.html',
+            'product.html',
+            'sale.html',
+        ],
+        created: 'HTML CSS JAVASCRIPT'
+    },
+    {
+        name: "Neuron",
+        imgUrl: '',
+        links: [
+            'index.html',
+        ],
+        created: 'HTML CSS Bootstrap JAVASCRIPT'
+    },
+    {
+        name: "Neuron",
+        imgUrl: '',
+        links: [
+            'index.html',
+        ],
+        created: 'HTML CSS Bootstrap JAVASCRIPT'
+    },
+    {
+        name: "RosMigrant",
+        imgUrl: '',
+        links: [
+            'index.html',
+            'news.html',
+            'wiframe.html',
+        ],
+        created: 'HTML CSS Bootstrap JAVASCRIPT'
+    },
+    {
+        name: "Travel",
+        imgUrl: '',
+        links: [
+            'index.html',
+        ],
+        created: 'HTML CSS JAVASCRIPT'
+    },
+]
+
+console.log(Works.length)
+
+// ... End  Works
+
+
+//... Pages
+
+
+$('.slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: false
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false
+            }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+    ]
+});
+
+
+//... Pages End
 
 
 // const slider = $('.rich-commercial-slider');
