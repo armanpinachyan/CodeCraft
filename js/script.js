@@ -66,6 +66,9 @@ window.onload = () => {
     }, 1500)
 }
 
+$(window).height()
+console.log($(window).width())
+
 $(window).on('scroll', ()=>{
     const scroly = window.scrollY;
     if(scroly >= 10){

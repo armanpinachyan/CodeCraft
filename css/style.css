@@ -377,8 +377,23 @@ body {
 header .col-box {
   width: 100%;
   height: 100%;
-  margin-top: 140px;
+  margin-top: 8.75rem;
   position: relative;
+}
+@media (max-width: 992px) {
+  header .col-box {
+    margin-top: 6.5rem;
+  }
+}
+@media (max-width: 768px) {
+  header .col-box {
+    margin-top: 5.5rem;
+  }
+}
+@media (max-width: 576px) {
+  header .col-box {
+    margin-top: 3.5rem;
+  }
 }
 header .col-box .heading-header {
   color: #000;
