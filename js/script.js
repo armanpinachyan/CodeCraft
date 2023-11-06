@@ -53,7 +53,7 @@ window.onload = () => {
         const tl = gsap.timeline({ease: "slow", duration: 1})
         document.addEventListener("mousemove", e => {
             gsap.utils.toArray(".circle").forEach(layer => {
-                const depth = layer.dataset.depth;
+                const depth = layer.dataset.depth * 2;
                 const moveX = ((e.pageX)-(window.innerWidth/2)) / 3;
                 const moveY = ((e.pageY)-(window.innerHeight/2) / 3);
                 tl.to(layer, {
@@ -62,12 +62,10 @@ window.onload = () => {
                     rotate: 15
                 }, 0);
             });
+
         });
     }, 1500)
 }
-
-$(window).height()
-console.log($(window).width())
 
 $(window).on('scroll', ()=>{
     const scroly = window.scrollY;
@@ -87,6 +85,18 @@ ScrollTrigger.create({
     start: `top -${choose_green - 400}`,
     end: 9999,
     toggleClass: {className: 'active', targets: '.choose-green '},
+});
+
+const buttons = gsap.utils.toArray('.etap-work-svg');
+buttons.forEach((btn) => {
+    gsap.from(btn, {
+        scrollTrigger: {
+            start: 'top bottom',
+            end: 'bottom top',
+            trigger: btn,
+            toggleClass: 'active'
+        }
+    });
 });
 
 
@@ -290,9 +300,44 @@ const Works  = [
     },
 ]
 
-console.log(Works.length)
+const tl = gsap.timeline({ease: "slow", duration: 1})
+$(window).on('mousemove', function (e){
+    gsap.utils.toArray(".calc-images-img").forEach(layer => {
+        const depth = layer.dataset.depth * 2;
+        const moveX = ((e.pageX)-(window.innerWidth/2)) / 5;
+        const moveY = ((e.pageY)-(window.innerHeight/2) / 2);
+        tl.to(layer, {
+            x: moveX/depth,
+            y: moveY/depth / 4,
+            rotate: 0
+        }, 0);
+    });
+})
+// -------------- FOR DEFAULT INPUT FUNCTION -------------------
 
-// ... End  Works
+
+const defaultInput = $('.def-input input, .def-input textarea');
+const inpLabel = $('.def-input');
+
+defaultInput.on('blur', function (){
+    inpLabel.map((index, e) => {
+        if($(e).children('input').val() === ''){
+            $(e).removeClass(active);
+        }
+        if($(e).children('textarea').val() === ''){
+            $(e).removeClass(active);
+        }
+    })
+})
+
+defaultInput.on('focus', function (){
+    $(this).parent().addClass(active);
+})
+
+
+
+
+// -------------- FOR DEFAULT INPUT FUNCTION -------------------
 
 
 //... Pages
@@ -315,146 +360,7 @@ $('.slider').slick({
                 infinite: true,
                 dots: true
             }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                dots: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: false
-            }
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
     ]
 });
-
-
-//... Pages End
-
-
-// const slider = $('.rich-commercial-slider');
-//
-// slider.slick({
-//     centerMode: true,
-//     // prevArrow: $('#prev'),
-//     // nextArrow: $('#next'),
-//     centerPadding: '450px',
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     infinite: true,
-//     speed: 1000,
-//     autoplay: true,
-//     responsive: [
-//         {
-//             breakpoint: 1352,
-//             settings: {
-//                 centerPadding: '350px',
-//             }
-//         },
-//         {
-//             breakpoint: 1100,
-//             settings: {
-//                 centerPadding: '250px',
-//             }
-//         },
-//         {
-//             breakpoint: 850,
-//             settings: {
-//                 centerPadding: '150px',
-//             }
-//         },
-//         {
-//             breakpoint: 768,
-//             settings: {
-//                 centerPadding: '100px',
-//             }
-//         },
-//         {
-//             breakpoint: 576,
-//             settings: {
-//                 centerPadding: '50px',
-//             }
-//         },
-//     ]
-// });
-//
-//
-
-// $(".fix-top").click(function() {
-//     $("html, body").animate({ scrollTop: 0 }, "smoth");
-//     return false;
-// });
-//
-//
-// const logo_number = document.querySelector('.logo-number')
-//
-// window.addEventListener('scroll', (e)=>{
-//     const scroly = window.scrollY;
-//     if(scroly >= 10){
-//         logo_number.classList.remove('active')
-//     } else if(scroly <= 10){
-//         logo_number.classList.add('active')
-//     }
-// })
-
-
-
-
-//if ($(window).width() <= 768){
-
-//     gsap.registerPlugin(ScrollTrigger);
-//
-//     gsap.to(".box-compromising", {
-//         x: -350,
-//         scrollTrigger: {
-//             trigger: '.box-compromising',
-//             scrub: true,
-//             toggleActions: 'play none none none',
-//         },
-//         duration: 1
-//     });
-//
-//
-// }
-//
-//
-//
-//     gsap.registerPlugin(ScrollTrigger);
-//
-//     gsap.to(".gallery-box", {
-//         x: -600,
-//         duration: 3,
-//         scrollTrigger: {
-//             trigger: '.gallery-box',
-//             scrub: true,
-//         },
-//         toggleActions : 'play none none none'
-//     });
-//
-//
-//     gsap.registerPlugin(ScrollTrigger);
-//
-//     gsap.to(".gallery-box-prev", {
-//         x: 600,
-//         duration: 3,
-//         scrollTrigger: {
-//             trigger: '.gallery-box-prev',
-//             scrub: true,
-//             end: '200%'
-//         },
-//         toggleActions : 'onEnter none none none'
-//     });
-//
-
-
 

@@ -117,6 +117,12 @@ body {
   position: relative;
 }
 
+.animation-video {
+  position: fixed;
+  top: 100px;
+  right: calc((100vw - 984px) / 2 - 287px);
+}
+
 .body-content {
   max-width: 1200px;
   width: 100%;
@@ -126,6 +132,7 @@ body {
   backdrop-filter: blur(7.5px);
   margin: 115px auto 150px auto;
   padding: 0 0 280px 0;
+  position: relative;
 }
 
 .container {
@@ -786,6 +793,322 @@ header .col-box .green.no-trans {
   right: 10px !important;
   width: 50px !important;
   height: 50px !important;
+}
+
+.calc {
+  margin-top: 100px;
+}
+.calc-images {
+  position: relative;
+}
+.calc-images img {
+  height: auto;
+}
+.calc-images img:nth-of-type(1) {
+  position: absolute;
+  left: -100px;
+  top: -100px;
+  width: 239px;
+  z-index: 1;
+}
+.calc-images img:nth-of-type(2) {
+  width: 300px;
+}
+.calc-images img:nth-of-type(3) {
+  position: absolute;
+  right: 50px;
+  bottom: -50px;
+  z-index: -1;
+  width: 226px;
+}
+
+.def-input {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin-bottom: 0.625rem;
+}
+.def-input.active span {
+  transform: translateY(0);
+  opacity: 1;
+  font-size: 0.9rem;
+}
+.def-input.active input {
+  border-bottom: 2px solid #000;
+}
+.def-input span {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  color: #fff;
+  transform: translateY(2.1875rem);
+  transition: 0.3s;
+  cursor: text;
+  opacity: 0.9;
+}
+.def-input input, .def-input textarea {
+  width: 100%;
+  height: 3.125rem;
+  border: 0;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  color: #fff;
+  transition: 0.3s;
+  background: transparent;
+}
+.def-input textarea {
+  height: 100px;
+  resize: none;
+}
+
+.etap-work-svg {
+  margin-top: 100px;
+}
+
+svg .etap-work-1 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+}
+
+svg.active .etap-work-1 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-2 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
+}
+
+svg.active .etap-work-2 {
+  fill: rgb(166, 14, 219);
+}
+
+svg .etap-work-3 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
+}
+
+svg.active .etap-work-3 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-4 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s;
+}
+
+svg.active .etap-work-4 {
+  fill: rgb(166, 14, 219);
+}
+
+svg .etap-work-5 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s;
+}
+
+svg.active .etap-work-5 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-6 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s;
+}
+
+svg.active .etap-work-6 {
+  fill: rgb(166, 14, 219);
+}
+
+svg .etap-work-7 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.4s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.4s;
+}
+
+svg.active .etap-work-7 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-8 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s;
+}
+
+svg.active .etap-work-8 {
+  fill: rgb(166, 14, 219);
+}
+
+svg .etap-work-9 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.6s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.6s;
+}
+
+svg.active .etap-work-9 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-10 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.7s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.7s;
+}
+
+svg.active .etap-work-10 {
+  fill: rgb(166, 14, 219);
+}
+
+svg .etap-work-11 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.8s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.8s;
+}
+
+svg.active .etap-work-11 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-12 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.9s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 1.9s;
+}
+
+svg.active .etap-work-12 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-13 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2s;
+}
+
+svg.active .etap-work-13 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-14 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.1s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.1s;
+}
+
+svg.active .etap-work-14 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-15 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.2s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.2s;
+}
+
+svg.active .etap-work-15 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-16 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.3s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.3s;
+}
+
+svg.active .etap-work-16 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-17 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.4s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.4s;
+}
+
+svg.active .etap-work-17 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-18 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.5s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.5s;
+}
+
+svg.active .etap-work-18 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-19 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.6s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.6s;
+}
+
+svg.active .etap-work-19 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-20 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.7s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.7s;
+}
+
+svg.active .etap-work-20 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-21 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.8s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.8s;
+}
+
+svg.active .etap-work-21 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-22 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.9s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 2.9s;
+}
+
+svg.active .etap-work-22 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-23 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 3s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 3s;
+}
+
+svg.active .etap-work-23 {
+  fill: rgb(255, 255, 255);
+}
+
+svg .etap-work-24 {
+  fill: transparent;
+  -webkit-transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 3.1s;
+  transition: fill 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) 3.1s;
+}
+
+svg.active .etap-work-24 {
+  fill: rgb(255, 255, 255);
 }
 
 /*# sourceMappingURL=style.css.map */
