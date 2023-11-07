@@ -21,6 +21,8 @@
   <script src="js/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="icons/icons.css">
@@ -93,7 +95,11 @@
 
 </div>
 
-<video src="video/animation.webm" class="animation-video" autoplay loop muted></video>
+<!--<video src="video/animation.webm" class="animation-video" autoplay loop muted></video>-->
+
+<div id="blob" data-depth="15">
+  <canvas width="500" height="500"></canvas>
+</div>
 
 <div class="body-content">
 
@@ -385,42 +391,6 @@
     </div>
   </section>
 
-  <section class="pages">
-    <div class="container">
-      <div class="box-heading">
-        <h2>ՄԵԶ ՎՍՏԱՀՈՒՄ ԵՆ</h2>
-      </div>
-      <div class="slider">
-        <div class="slider-image">
-          <div class="d-flex justify-content-center align-items-center text-center">
-            <img width="137" height="27" src="images/aniox-logo.svg" alt="aniox">
-          </div>
-        </div>
-        <div class="slider-image">
-          <div class="d-flex justify-content-center align-items-center text-center">
-            <img width="141" height="36" src="images/webiqlogo.svg" alt="aniox">
-          </div>
-        </div>
-        <div class="slider-image">
-          <div class="d-flex justify-content-center align-items-center text-center">
-            <img width="137" height="39" src="images/neuron-logo.svg" alt="aniox">
-          </div>
-        </div>
-        <div class="slider-image" style="background: #000">
-          <div class="d-flex justify-content-center align-items-center text-center">
-            <img width="102" height="92" src="images/rimplitka-logo.svg" alt="aniox">
-          </div>
-        </div>
-        <div class="slider-image" style="background: #000">
-          <div class="d-flex justify-content-center align-items-center text-center">
-            <img width="102" height="92" src="images/rimplitka-logo.svg" alt="aniox">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
   <section class="calc">
     <div class="container">
       <div class="box-heading">
@@ -469,6 +439,44 @@
       </div>
     </div>
   </section>
+
+  <section class="pages">
+    <div class="container">
+      <div class="box-heading">
+        <h2>ՄԵԶ ՎՍՏԱՀՈՒՄ ԵՆ</h2>
+      </div>
+      <div class="slider">
+        <div class="slider-image">
+          <div class="d-flex justify-content-center align-items-center text-center">
+            <img width="137" height="27" src="images/aniox-logo.svg" alt="aniox">
+          </div>
+        </div>
+        <div class="slider-image">
+          <div class="d-flex justify-content-center align-items-center text-center">
+            <img width="141" height="36" src="images/webiqlogo.svg" alt="aniox">
+          </div>
+        </div>
+        <div class="slider-image">
+          <div class="d-flex justify-content-center align-items-center text-center">
+            <img width="137" height="39" src="images/neuron-logo.svg" alt="aniox">
+          </div>
+        </div>
+        <div class="slider-image" style="background: #000">
+          <div class="d-flex justify-content-center align-items-center text-center">
+            <img width="102" height="92" src="images/rimplitka-logo.svg" alt="aniox">
+          </div>
+        </div>
+        <div class="slider-image" style="background: #000">
+          <div class="d-flex justify-content-center align-items-center text-center">
+            <img width="102" height="92" src="images/rimplitka-logo.svg" alt="aniox">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
 </div>
 <div class="text-center mb-5">
   <img src="images/CODECRAFT.svg" alt="CODECRAFT logo footer">
