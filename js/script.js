@@ -37,33 +37,41 @@ const menu = document.querySelector('.menu')
 const yellow = document.querySelector('.yellow')
 const green = document.querySelector('.green')
 const purple = document.querySelector('.purple')
+const yellowMobile = document.querySelector('.yellow-mobile')
+const greenMobile = document.querySelector('.green-mobile')
+const purpleMobile = document.querySelector('.purple-mobile')
 
 window.onload = () => {
     setTimeout(() => {
         yellow.classList.add('active')
         green.classList.add('active')
         purple.classList.add('active')
+        yellowMobile.classList.add('active')
+        greenMobile.classList.add('active')
+        purpleMobile.classList.add('active')
 
         setTimeout(()=>{
             yellow.classList.add('no-trans')
             green.classList.add('no-trans')
             purple.classList.add('no-trans')
         },300)
-
         const tl = gsap.timeline({ease: "slow", duration: 1})
-        document.addEventListener("mousemove", e => {
-            gsap.utils.toArray(".circle").forEach(layer => {
-                const depth = layer.dataset.depth * 2;
-                const moveX = ((e.pageX)-(window.innerWidth/2)) / 3;
-                const moveY = ((e.pageY)-(window.innerHeight/2) / 3);
-                tl.to(layer, {
-                    x: moveX/depth,
-                    y: moveY/depth,
-                    rotate: 15
-                }, 0);
-            });
+          if(window.innerWidth > 992){
 
-        });
+              document.addEventListener("mousemove", e => {
+                  gsap.utils.toArray(".circle").forEach(layer => {
+                      const depth = layer.dataset.depth * 2;
+                      const moveX = ((e.pageX)-(window.innerWidth/2)) / 3;
+                      const moveY = ((e.pageY)-(window.innerHeight/2) / 3);
+                      tl.to(layer, {
+                          x: moveX/depth,
+                          y: moveY/depth,
+                          rotate: 15
+                      }, 0);
+                  });
+
+              });
+          }
     }, 1500)
 }
 
@@ -102,6 +110,7 @@ buttons.forEach((btn) => {
 
 const mobileMenBoard = document.querySelector('.mobile-menu-board');
 const menuItemMobile = document.querySelector('.menu-item-mobile');
+const menuItemMobileLink = document.querySelectorAll('.menu-item-mobile ul li');
 mobileMenBoard.addEventListener('click', function (){
     if(this.classList.contains(active)){
         this.classList.remove(active);
@@ -114,6 +123,19 @@ mobileMenBoard.addEventListener('click', function (){
     }
 })
 
+menuItemMobileLink.forEach((item)=>{
+    item.addEventListener('click', ()=>{
+        if(mobileMenBoard.classList.contains(active)){
+            mobileMenBoard.classList.remove(active);
+            menuItemMobile.classList.remove(active);
+            document.body.style.overflow = null;
+        } else {
+            mobileMenBoard.classList.add(active);
+            menuItemMobile.classList.add(active);
+            document.body.style.overflow = 'hidden';
+        }
+    })
+})
 
 //. Works
 
@@ -358,7 +380,7 @@ $('.slider').slick({
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 infinite: true,
-                dots: true
+                dots: false
             }
         }
     ]

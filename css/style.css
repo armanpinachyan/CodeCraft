@@ -88,6 +88,11 @@ body {
   background: linear-gradient(90deg, #B51160, #FBB707, #F6254B);
   position: relative;
 }
+@media (max-width: 576px) {
+  .box-heading {
+    height: 4rem;
+  }
+}
 .box-heading:before {
   content: "";
   position: absolute;
@@ -106,7 +111,7 @@ body {
   align-items: center;
   height: 100%;
   text-align: center;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 600;
   line-height: 72px;
   letter-spacing: 1.6px;
@@ -115,6 +120,31 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
+}
+@media (max-width: 576px) {
+  .box-heading h2 {
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 475px) {
+  .box-heading h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .box-heading h2 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 375px) {
+  .box-heading h2 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 340px) {
+  .box-heading h2 {
+    font-size: 1rem;
+  }
 }
 
 .animation-video {
@@ -133,6 +163,11 @@ body {
   margin: 115px auto 150px auto;
   padding: 0 0 280px 0;
   position: relative;
+}
+@media (max-width: 576px) {
+  .body-content {
+    padding: 0 10px 280px 10px;
+  }
 }
 
 .container {
@@ -229,7 +264,7 @@ body {
 }
 .menu.active .logo {
   transform: scale(0.8);
-  top: 40px !important;
+  top: 0 !important;
 }
 .menu .menu-item2 {
   display: none;
@@ -243,6 +278,8 @@ body {
   }
   .menu .menu-item2 .logo {
     transform: scale(0.3);
+    position: relative;
+    left: -23px;
   }
 }
 .menu .menu-item2 .mobile-menu-board {
@@ -344,6 +381,9 @@ body {
 .menu .menu-item ul li:last-child {
   margin-right: 0;
 }
+.menu .menu-item ul li a {
+  color: #000;
+}
 
 .menu-item-mobile {
   position: fixed;
@@ -381,6 +421,83 @@ body {
   padding-bottom: 5px;
 }
 
+@media (max-width: 992px) {
+  header .col-image {
+    display: none;
+  }
+}
+header .col-image-mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  header .col-image-mobile {
+    display: block;
+    position: relative;
+    width: 171px;
+    height: 241px;
+    margin: 2.6rem auto 2.5rem auto;
+  }
+}
+header .col-image-mobile .img-mobile {
+  width: 171px;
+  height: 241px;
+}
+header .col-image-mobile .yellow-mobile {
+  position: absolute;
+  left: 70px;
+  top: 40px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #F90;
+  transition: 0.3s linear;
+  z-index: -1;
+}
+header .col-image-mobile .yellow-mobile.active {
+  left: -35px;
+  top: -20px;
+}
+header .col-image-mobile .yellow-mobile.no-trans {
+  transition: unset !important;
+}
+header .col-image-mobile .purple-mobile {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: -1;
+  width: 160px;
+  height: 230px;
+  transform: rotate(0);
+  border-radius: 30px;
+  background: #C529FC;
+  transition: 0.3s linear;
+}
+header .col-image-mobile .purple-mobile.active {
+  transform: rotate(15deg);
+  left: 30px;
+  top: 0;
+}
+header .col-image-mobile .purple-mobile.no-trans {
+  transition: unset !important;
+}
+header .col-image-mobile .green-mobile {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #287B67;
+  transition: 0.3s linear;
+  z-index: -1;
+}
+header .col-image-mobile .green-mobile.active {
+  right: -50px;
+  bottom: 10px;
+}
+header .col-image-mobile .green-mobile.no-trans {
+  transition: unset !important;
+}
 header .col-box {
   width: 100%;
   height: 100%;
@@ -410,19 +527,35 @@ header .col-box .heading-header {
   letter-spacing: 2.4px;
   text-transform: uppercase;
 }
+@media (max-width: 576px) {
+  header .col-box .heading-header {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
 header .col-box .header-subtitle {
   color: #000;
   font-size: 1.25rem;
   font-weight: 300;
 }
+@media (max-width: 576px) {
+  header .col-box .header-subtitle {
+    font-size: 1rem;
+  }
+}
 header .col-box .btn-header {
-  margin-top: 35px;
+  margin-top: 2.1875rem;
   padding: 8px 30px;
   color: #FFF;
   font-size: 1.25rem;
   font-weight: 300;
   border-radius: 30px;
   background: linear-gradient(92deg, #A60EDB 1.64%, #B51160 99.59%);
+}
+@media (max-width: 576px) {
+  header .col-box .btn-header {
+    margin-top: 1.7rem;
+  }
 }
 header .col-box .yellow {
   position: absolute;
@@ -503,6 +636,14 @@ header .col-box .green.no-trans {
   border-radius: 15px;
   position: relative;
 }
+@media (max-width: 992px) {
+  .choose-us-box-image {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+}
 .choose-us-box-image .choose-green {
   position: absolute;
   left: 25px;
@@ -523,6 +664,7 @@ header .col-box .green.no-trans {
 .choose-us-box-image img {
   width: 100%;
   height: 100%;
+  border-radius: 15px;
   object-fit: cover;
   overflow: hidden;
 }
@@ -533,6 +675,12 @@ header .col-box .green.no-trans {
   font-weight: 350;
   line-height: normal;
   letter-spacing: 0.64px;
+}
+@media (max-width: 576px) {
+  .choose-us-box p {
+    font-size: 0.9rem;
+    margin-top: 1.875rem;
+  }
 }
 .choose-us-box p span {
   font-weight: 600;
@@ -547,6 +695,11 @@ header .col-box .green.no-trans {
     margin-top: 5rem;
   }
 }
+@media (max-width: 576px) {
+  .works {
+    margin-top: 3.5rem;
+  }
+}
 .works-box {
   background-size: cover;
   background-position: center;
@@ -559,6 +712,11 @@ header .col-box .green.no-trans {
 }
 .works-box.active {
   transform: translateY(-50px);
+}
+@media (max-width: 768px) {
+  .works-box.active {
+    transform: translateY(0);
+  }
 }
 .works-box:hover {
   box-shadow: 0 0 10px #fff;
@@ -624,6 +782,16 @@ header .col-box .green.no-trans {
   font-weight: 600;
   white-space: nowrap;
 }
+@media (max-width: 768px) {
+  .contact-box .name {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .contact-box .name {
+    font-size: 1.5rem;
+  }
+}
 .contact-box .position {
   color: #FFF;
   font-size: 1.875rem;
@@ -631,12 +799,39 @@ header .col-box .green.no-trans {
   letter-spacing: 6px;
   margin-bottom: 3.75rem;
 }
+@media (max-width: 768px) {
+  .contact-box .position {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .contact-box .position {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+}
 .contact-box-numbers a {
   display: block;
   color: #FFF;
   font-size: 1.875rem;
   font-weight: 400;
   letter-spacing: 6px;
+}
+@media (max-width: 768px) {
+  .contact-box-numbers a {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .contact-box-numbers a {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 576px) {
+  .contact-box img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .preparation {
