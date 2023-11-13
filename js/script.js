@@ -110,7 +110,7 @@ buttons.forEach((btn) => {
 
 const mobileMenBoard = document.querySelector('.mobile-menu-board');
 const menuItemMobile = document.querySelector('.menu-item-mobile');
-const menuItemMobileLink = document.querySelectorAll('.menu-item-mobile ul li');
+const menuItemMobileLink = document.querySelectorAll('.menu-item-mobile ul .menu-item-mobile-link');
 mobileMenBoard.addEventListener('click', function (){
     if(this.classList.contains(active)){
         this.classList.remove(active);

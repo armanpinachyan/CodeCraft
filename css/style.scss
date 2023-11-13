@@ -237,7 +237,39 @@ body{
   }
 }
 
-
+.dropdown-flag-body{
+  background: transparent;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 20000;
+  list-style: none;
+  @media (max-width: 992px) {
+  display: none !important;
+  }
+  button{
+    background: transparent;
+    border: none;
+    &:active{
+      background: transparent !important;
+    }
+    &:hover{
+      background: transparent !important;
+    }
+  }
+  .dropdown-menu{
+    background: transparent;
+    width: 20px !important;
+    inset: -1px -97px auto auto !important;
+    height: auto;
+    img{
+      display: block;
+      width: 25px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  }
+}
 
 //............ Menu
 
@@ -880,14 +912,24 @@ header{
     @media (max-width: 992px) {
       margin-bottom: -40px;
     }
-    @media (max-width: 475px) {
-      margin-bottom: -60px;
+    @media (max-width: 576px) {
+      margin-bottom: 30px;
     }
   }
   svg{
     @media (max-width: 992px) {
       width: 100%;
       height: 100%;
+    }
+    @media (max-width: 576px) {
+    display: none;
+    }
+  }
+
+  img{
+    display: none;
+    @media (max-width: 576px) {
+      display: initial;
     }
   }
 
