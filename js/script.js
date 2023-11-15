@@ -487,13 +487,16 @@ flag2.forEach((elem, index) =>{
     elem.addEventListener('click', ()=>{
       flag.forEach((el, i) =>{
           if(elem.classList[1] === 'img-am'){
-              elem.classList.add('active')
+              el.classList.remove('active')
+              flag[0].classList.add('active')
           }
           else if(elem.classList[1] === 'img-ru'){
-              elem.classList.add('active')
+              el.classList.remove('active')
+              flag[1].classList.add('active')
           }
           else if(elem.classList[1] === 'img-en'){
-              elem.classList.add('active')
+              el.classList.remove('active')
+              flag[2].classList.add('active')
           }
       })
     })
