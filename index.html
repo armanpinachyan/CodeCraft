@@ -35,23 +35,25 @@
 </head>
 <body>
 
-<li class="dropdown dropdown-flag-body">
+<div class="dropdown dropdown-flag-body">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
           aria-expanded="false">
-    <img src="images/armenian-flag.svg" alt="armenian">
+    <img class="imgs img-am active" src="images/armenian-flag.svg" alt="armenian">
+    <img class="imgs img-ru" src="images/flag-ru.svg" alt="armenia">
+    <img class="imgs img-en" src="images/usa-flag5879.jpg" alt="armenia">
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-    <li>
-      <img src="images/armenian-flag.svg" alt="armenia">
+    <li class="li-am" onclick="translateSite('am')">
+      <img class="imgs2 img-am " src="images/armenian-flag.svg" alt="armenia" >
     </li>
-    <li>
-      <img src="images/flag-ru.svg" alt="armenia">
+    <li class="li-ru" onclick="translateSite('ru')">
+      <img class="imgs2 img-ru" src="images/flag-ru.svg" alt="ru">
     </li>
-    <li>
-      <img src="images/usa-flag5879.jpg" alt="armenia">
+    <li class="li-en">
+      <img class="imgs2 img-en" src="images/usa-flag5879.jpg" alt="usa">
     </li>
   </ul>
-</li>
+</div>
 
 
 <img class="ball-yellow" src="images/image-ball1.png" alt="ball">
@@ -61,17 +63,17 @@
 
   <div class="menu-item">
     <ul>
-      <li><a href="#choose-us">Մեր Մասին</a></li>
-      <li><a href="#works">Մեր Աշխատանքները</a></li>
-      <li><a href="#contact">Կապ</a></li>
+      <li><a class="tr-site"  href="#choose-us"  data-key="about"></a></li>
+      <li><a class="tr-site" href="#works"  data-key="works"></a></li>
+      <li><a href="#contact"  data-key="contact"></a></li>
     </ul>
     <div class="logo">
       <img width="157" height="161" src="images/logo.svg" alt="logo">
     </div>
     <ul>
-      <li><a href="#services">Ծառայություններ</a></li>
-      <li><a href="#calc">Հաշվիչ</a></li>
-      <li><a href="#pages">Գործընկերներ</a></li>
+      <li><a class="tr-site" href="#services"  data-key="services"></a></li>
+      <li><a class="tr-site" href="#calc"  data-key="calc"></a></li>
+      <li><a class="tr-site" href="#pages"  data-key="pages"></a></li>
     </ul>
   </div>
 
@@ -90,12 +92,12 @@
 
 <div class="menu-item-mobile">
   <ul>
-    <li class="menu-item-mobile-link"><a href="#choose-us">Մեր Մասին</a></li>
-    <li class="menu-item-mobile-link"><a href="#works">Մեր Աշխատանքները</a></li>
-    <li class="menu-item-mobile-link"><a href="#contact">Կապ</a></li>
-    <li class="menu-item-mobile-link"><a href="#services">Ծառայություններ</a></li>
-    <li class="menu-item-mobile-link"><a href="#calc">Հաշվիչ</a></li>
-    <li class="menu-item-mobile-link" ><a href="#pages">Գործընկերներ</a></li>
+    <li class="menu-item-mobile-link"><a class="tr-site" data-key="about" href="#choose-us"></a></li>
+    <li class="menu-item-mobile-link"><a class="tr-site" data-key="works" href="#works"></a></li>
+    <li class="menu-item-mobile-link"><a class="tr-site" data-key="contact" href="#contact"></a></li>
+    <li class="menu-item-mobile-link"><a class="tr-site" data-key="services" href="#services"></a></li>
+    <li class="menu-item-mobile-link"><a class="tr-site" data-key="calc" href="#calc"></a></li>
+    <li class="menu-item-mobile-link"><a class="tr-site" data-key="pages" href="#pages"></a></li>
     <li class="dropdown dropdown-flag">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -128,14 +130,12 @@
   <div class="body-content">
 
 
-
     <header id="header">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-12" data-aos="fade-right" data-aos-duration="1000">
             <div class="col-box">
-              <h1 class="heading-header">
-                Վեբ Կայքերի Պատրաստում
+              <h1 class="heading-header tr-site" data-key="header_title">
               </h1>
               <div class="col-image-mobile" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
                   <div class="yellow-mobile circle" data-depth="10"></div>
@@ -144,15 +144,9 @@
                   <div class="green-mobile circle" data-depth="10"></div>
 
               </div>
-              <p class="header-subtitle">
-                Ունեցիր քո կայքը, քո սեփական բիզնեսի համար, և ավելցրու քո եկամուտը.
-                <br>
-                <br>
-                Ցանկացած ժամանակակից բիզնես պետքե ունենա իր կայքը քանի որ այն կարող է եկամուտի մէջ մեծ տարբերություն տալ
+              <p class="header-subtitle tr-site" data-key="key_2">
               </p>
-              <button class="btn-header">
-                Կապ մեզ հետ
-                <i class="fa-solid fa-phone ps-10"></i>
+              <button class="btn-header tr-site" data-key="btn-header1">
               </button>
             </div>
           </div>
@@ -178,7 +172,7 @@
     <section id="choose-us" class="choose-us">
       <div class="container">
         <div class="box-heading">
-          <h2>Ինչու ընտրել մեզ</h2>
+          <h2 class="tr-site" data-key="head1"></h2>
         </div>
         <div class="row mt-55">
           <div class="col-lg-6 col-12 ">
@@ -191,33 +185,26 @@
           </div>
           <div class="col-lg-6 col-12 ">
             <div class="choose-us-box">
-              <p class="mb-8">
-                <span>Նորարարություն և ստեղծագործականություն.</span> Մենք ստեղծում ենք ժամանակակից վեբ
-                նախագծեր և կրթական ծրագրեր, որոնք միշտ մեկ քայլ առաջ են միտումներից:
+              <p class="mb-8 tr-site" data-key="p1">
+
               </p>
-              <p class="mb-8">
-                <span>Պրոֆեսիոնալ թիմ.</span> Մեր փորձառու մշակողները և հրահանգիչները
-                ապահովում են ամենաբարձր մակարդակի գիտելիքներն ու հմտությունները:
+              <p class="mb-8 tr-site" data-key="p2">
+
               </p>
-              <p class="mb-8">
-                <span>Գործնական փորձ.</span> Սովորել անելով: Ուսանողները լուծում են իրական խնդիրներ՝
-                պատրաստվելով հաջող կարիերայի։
+              <p class="mb-8 tr-site"  data-key="p3">
+
               </p>
-              <p class="mb-8">
-                <span>Ճկունություն և անհատականություն.</span> Մեր ծրագրերը հարմար են հմտությունների բոլոր մակարդակների
-                համար, և ճկուն գրաֆիկները
-                հարմարեցված են ձեզ համապատասխան:
+              <p class="mb-8 tr-site" data-key="p4">
+
               </p>
-              <p class="mb-8">
-                <span>Ոգեշնչող համայնք. </span> Դուք դառնում եք ակտիվ համայնքի մի մասը, որտեղ ձեր
-                գաղափարները աջակցվում են:
+              <p class="mb-8 tr-site" data-key="p5">
+
               </p>
-              <p class="mb-8">
-                <span>Իրական արդյունքներ</span> շրջանավարտները հաջողությամբ կիրառում են գիտելիքները՝
-                սկսելով կարիերա ՏՏ ոլորտում կամ սկսելով իրենց սեփական նախագծերը:
+              <p class="mb-8 tr-site" data-key="p6">
+
               </p>
-              <p class="mb-8">
-                Միացե՛ք մեզ և դարձե՛ք հաջողության մի մասը վեբ մշակման և ՏՏ ոլորտում:
+              <p class="mb-8 tr-site" data-key="p7">
+
               </p>
             </div>
           </div>
@@ -234,7 +221,7 @@
     <section id="works" class="works">
       <div class="container">
         <div class="box-heading">
-          <h2>ՄԵՐ ԱՇԽԱՏԱՆՔՆԵՐԸ</h2>
+          <h2 class="tr-site" data-key="head2"></h2>
         </div>
         <div class="row mt-md-90 mt-60" id="works-row">
           <div class="col-md-4 col-sm-6 col-12 mb-30 h-500">
@@ -336,7 +323,7 @@
         </div>
 
         <div class="text-center">
-          <button class="btn btn-light">Տեսնել Ավելին</button>
+          <button class="btn btn-light tr-site" data-key="btn2"></button>
         </div>
       </div>
     </section>
@@ -344,12 +331,12 @@
     <section id="contact" class="contact">
       <div class="container">
         <div class="box-heading">
-          <h2>ԿՈՆՏԱԿՏԱՅԻՆ ՏՎՅԱԼՆԵՐ</h2>
+          <h2 class="tr-site" data-key="head3"></h2>
         </div>
         <div class="row mt-md-104 mt-60">
           <div class="col-md-6 col-12">
             <div class="contact-box">
-              <h2 class="name">ԱՆԴՐԱՆԻԿ ԹՈՐԳՈՄՅԱՆ</h2>
+              <h2 class="name tr-site" data-key="name"></h2>
               <h4 class="position">FullStack Developer</h4>
               <div class="contact-box-numbers">
                 <a class="mb-20" href="tel:+37477769668">
@@ -379,7 +366,7 @@
     <section id="preparation" class="preparation">
       <div class="container">
         <div class="box-heading preparation-heading">
-          <h2>Կայքը ըստ փուլերի</h2>
+          <h2 class="tr-site" data-key="head4"></h2>
         </div>
         <svg width="1059" height="336" viewBox="0 0 1059 336" fill="none" xmlns="http://www.w3.org/2000/svg" class="etap-work-svg">
           <path d="M54 35C54 18.4315 67.4315 5 84 5C100.569 5 114 18.4315 114 35C114 51.5685 100.569 65 84 65C67.4315 65 54 51.5685 54 35Z" fill="white" class="etap-work-1"></path>
@@ -416,7 +403,7 @@
     <section id="services" class="services">
       <div class="container">
         <div class="box-heading">
-          <h2>Մեր ծառայությունները</h2>
+          <h2 class="tr-site" data-key="head5"></h2>
         </div>
         <div class="services-image">
           <img src="images/services.png" alt="services">
@@ -427,7 +414,7 @@
     <section id="calc" class="calc">
       <div class="container">
         <div class="box-heading">
-          <h2>ՀԱՇՎԻՉ</h2>
+          <h2 class="tr-site" data-key="head6"></h2>
         </div>
         <div class="row mt-lg-120  mt-md-150 mt-80">
           <div class="col-lg-6 col-12">
@@ -441,31 +428,30 @@
             </div>
           </div>
           <div class="col-lg-6 col-12 mt-lg-0 mt-100">
-            <h3 class="c-white fs-25">
-              Խնդրում եմ լրացրեք տվյալները
+            <h3 class="c-white fs-25 tr-site" data-key="calc-h3">
+
             </h3>
             <div class="mb-3">
               <label class="def-input">
-                <span>Ձեր Անունը</span>
+                <span class="tr-site" data-key="calc-sp1"></span>
                 <input type="text" name="subject">
               </label>
             </div>
             <div class="mb-3">
               <label class="def-input">
-                <span>Հեռախոսահամար</span>
+                <span class="tr-site" data-key="calc-sp2"></span>
                 <input type="text" name="subject">
               </label>
             </div>
             <div class="mb-3">
               <label class="def-input">
-                <span>Նկարագրություն</span>
+                <span class="tr-site" data-key="calc-sp3"></span>
                 <textarea name="" id="" cols="30" rows="10"></textarea>
               </label>
             </div>
             <div class="mt-4">
-              <button class="btn btn-light br-30 c-purple fs-20 px-5">
-                Ուղղարկել
-                <i class="fa-regular fa-paper-plane ms-2"></i>
+              <button class="btn btn-light br-30 c-purple fs-20 px-5 tr-site" data-key="calc-btn">
+
               </button>
             </div>
           </div>
@@ -476,7 +462,7 @@
     <section id="pages" class="pages">
       <div class="container">
         <div class="box-heading">
-          <h2>ՄԵԶ ՎՍՏԱՀՈՒՄ ԵՆ</h2>
+          <h2 class="tr-site" data-key="head7"></h2>
         </div>
         <div class="slider">
           <div class="slider-image">

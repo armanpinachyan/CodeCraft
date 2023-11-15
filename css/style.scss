@@ -247,6 +247,20 @@ body{
   @media (max-width: 992px) {
   display: none !important;
   }
+  .dropdown-toggle{
+    .imgs{
+      display: none;
+      &.active{
+        display: initial;
+      }
+    }
+    img{
+      display: block;
+      width: 25px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  }
   button{
     background: transparent;
     border: none;
@@ -262,6 +276,7 @@ body{
     width: 20px !important;
     inset: -1px -97px auto auto !important;
     height: auto;
+
     img{
       display: block;
       width: 25px;
@@ -427,6 +442,7 @@ body{
         }
         a{
           color: #000;
+          text-transform: capitalize;
         }
       }
     }
@@ -464,6 +480,10 @@ body{
         margin: 15px 0;
         border-bottom: 1px solid #fff;
         padding-bottom: 5px;
+        a{
+          color: #000;
+          text-transform: capitalize;
+        }
       }
   }
 }

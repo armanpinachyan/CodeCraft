@@ -267,6 +267,18 @@ body {
     display: none !important;
   }
 }
+.dropdown-flag-body .dropdown-toggle .imgs {
+  display: none;
+}
+.dropdown-flag-body .dropdown-toggle .imgs.active {
+  display: initial;
+}
+.dropdown-flag-body .dropdown-toggle img {
+  display: block;
+  width: 25px;
+  margin: 10px;
+  cursor: pointer;
+}
 .dropdown-flag-body button {
   background: transparent;
   border: none;
@@ -443,6 +455,7 @@ body {
 }
 .menu .menu-item ul li a {
   color: #000;
+  text-transform: capitalize;
 }
 
 .menu-item-mobile {
@@ -479,6 +492,10 @@ body {
   margin: 15px 0;
   border-bottom: 1px solid #fff;
   padding-bottom: 5px;
+}
+.menu-item-mobile ul li a {
+  color: #000;
+  text-transform: capitalize;
 }
 
 @media (max-width: 992px) {
