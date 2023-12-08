@@ -142,7 +142,7 @@ menuItemMobileLink.forEach((item)=>{
 const Works  = [
     {
         name: "Sdney",
-        imgUrl: '',
+        imgUrl: 'images/Empower-Prosper.png',
         links: {
             link: 'index.html'
         },
@@ -320,7 +320,50 @@ const Works  = [
         ],
         created: 'HTML CSS JAVASCRIPT'
     },
-]
+];
+
+
+const works_row = document.querySelector('#works-row')
+
+Works.forEach((elem =>{
+    works_row.insertAdjacentHTML('beforeend', PrintWorks(elem))
+
+}))
+
+
+function PrintWorks (elem){
+        return (
+          `
+          <div class="col-md-4 col-sm-6 col-12 mb-30 h-500">
+            <div style="background-image: url(${elem.imgUrl})" class="works-box">
+              <div class="works-box-pages-link">
+                <a class="github-link" href="#">${elem.name}</a>
+                <div class="link-box overflow-y-auto">
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                  <a class="link" href="#">index.html</a>
+                </div>
+                <p class="page-about">HTML5 SCSS JS</p>
+              </div>
+            </div>
+          </div>
+
+`
+        )
+}
+
 
 const tl = gsap.timeline({ease: "slow", duration: 1})
 $(window).on('mousemove', function (e){
