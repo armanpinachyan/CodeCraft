@@ -779,7 +779,7 @@ header .col-box .green.no-trans {
 }
 .works-box {
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
@@ -818,7 +818,7 @@ header .col-box .green.no-trans {
   opacity: 1;
 }
 .works-box-pages-link .github-link {
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   color: #fff;
   display: block;
 }
@@ -832,9 +832,14 @@ header .col-box .green.no-trans {
 }
 .works-box-pages-link .link {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #fff;
   margin-bottom: 0.5rem;
+}
+@media (max-width: 576px) {
+  .works-box-pages-link .link {
+    font-size: 1rem;
+  }
 }
 .works-box-pages-link .page-about {
   font-size: 1.2rem;
@@ -1106,6 +1111,7 @@ header .col-box .green.no-trans {
 }
 .calc-images {
   position: relative;
+  left: 30px;
 }
 @media (max-width: 992px) {
   .calc-images {

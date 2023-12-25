@@ -776,7 +776,7 @@ header{
 
 &-box{
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
@@ -811,7 +811,7 @@ header{
         opacity: 1;
     }
     .github-link{
-      font-size: .8rem;
+     font-size: 1.3rem;
       color: #fff;
       display: block;
     }
@@ -825,9 +825,12 @@ header{
     }
     .link{
       display: block;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #fff;
       margin-bottom: .5rem;
+      @media (max-width: 576px) {
+        font-size: 1rem;
+      }
     }
     .page-about{
       font-size: 1.2rem;
@@ -1132,6 +1135,7 @@ header{
   }
   &-images{
     position: relative;
+    left: 30px;
     @media (max-width: 992px) {
       max-width: 500px;
       width: 100%;

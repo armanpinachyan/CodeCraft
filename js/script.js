@@ -142,183 +142,338 @@ menuItemMobileLink.forEach((item)=>{
 const Works  = [
     {
         name: "Sdney",
+        imgUrl: 'images/Sydney.png',
+        links: [
+            {
+                name: 'index.html',
+                url: 'https://armanpinachyan.github.io/Sdney/'
+            }
+        ],
+        created: 'HTML CSS JS'
+    },
+    {
+        name: "Empover-Prosper",
         imgUrl: 'images/Empower-Prosper.png',
-        links: {
-            link: 'index.html'
-        },
-        created: 'HTML CSS JAVASCRIPT'
+        links: [
+            {
+                name: 'index.html',
+                url: 'https://armanpinachyan.github.io/empower-prospe/'
+            }
+        ],
+        created: 'HTML CSS JS'
     },
     {
         name: "Aniox",
-        imgUrl: '',
+        imgUrl: 'images/Aniox.png',
         links: [
-            'confirm-email.html',
-            'email.html',
-            'index.html',
-            'finish.html',
-            'login.html',
-            'new-ticket.html',
-            'robo.html',
-            'steps.html',
-            'ticket.html',
-            'ticket-message.html',
-            'trial.html',
+            {
+                name: 'index.html',
+                url: 'https://armanpinachyan.github.io/Aniox/'
+            },
+            {
+                name: 'confirm-email.html',
+                url: 'https://armanpinachyan.github.io/Aniox/confirm-email.html'
+            },
+            {
+                name: 'email.html',
+                url: 'https://armanpinachyan.github.io/Aniox/email.html'
+            },
+            {
+                name: 'finish.html',
+                url: 'https://armanpinachyan.github.io/Aniox/finish.html'
+            },
+            {
+                name: 'login.html',
+                url: 'https://armanpinachyan.github.io/Aniox/login.html'
+            },
+            {
+                name: 'new-ticket.html',
+                url: 'https://armanpinachyan.github.io/Aniox/new-ticket.html'
+            },
+            {
+                name: 'robo.html',
+                url: 'https://armanpinachyan.github.io/Aniox/robo.html'
+            },
+            {
+                name: 'steps.html',
+                url: 'https://armanpinachyan.github.io/Aniox/steps.html'
+            },
+            {
+                name: 'ticket.html',
+                url: 'https://armanpinachyan.github.io/Aniox/ticket.html'
+            },
+            {
+                name: 'ticket-message.html',
+                url: 'https://armanpinachyan.github.io/Aniox/ticket-message.html'
+            },
+            {
+                name: 'trial.html',
+                url: 'https://armanpinachyan.github.io/Aniox/trial.html'
+            },
+
 
         ],
-        created: 'HTML CSS JAVASCRIPT'
+        created: 'HTML CSS JS'
     },
     {
         name: "Lagom",
-        imgUrl: '',
+        imgUrl: 'images/Lagom.png',
         links: [
-            'index.html',
+            {
+                name: 'index.html',
+                url: 'https://armanpinachyan.github.io/Lagom/'
+            }
 
         ],
-        created: 'HTML CSS JAVASCRIPT'
+        created: 'HTML CSS SCSS JS jQUERY GSAP'
+    },
+    {
+        name: "Arthall-Synergy",
+        imgUrl: 'images/ArtHall-Synergy.png',
+        links: [
+            {
+                name: 'index.html',
+                url: 'https://armanpinachyan.github.io/Arthall-Synergy/'
+            }
+
+        ],
+        created: 'HTML CSS JS'
     },
     {
         name: "Artel",
-        imgUrl: '',
+        imgUrl: 'images/ARTEL1.png',
         links: [
-            'index.html',
+            {
+                name: 'index.html',
+                url: 'https://armanpinachyan.github.io/Artel/'
+            }
 
         ],
-        created: 'HTML CSS JAVASCRIPT'
-    },
-    {
-        name: "Arthall-Synergy",
-        imgUrl: '',
-        links: [
-            'index.html',
-
-        ],
-        created: 'HTML CSS JAVASCRIPT'
+        created: 'HTML CSS SCSS JS jQUERY GSAP '
     },
     {
         name: "RimPlitka",
-        imgUrl: '',
+        imgUrl: 'images/RIM-PLITKA.png',
         links: [
-            'index.html',
+            {
+                name: 'index.html',
+                url: 'https://mrs-rimplitka.ru/'
+            }
 
         ],
-        created: 'HTML CSS JAVASCRIPT'
+        created: 'HTML CSS JS BOOTSTRAP'
     },
     {
         name: "Arthall",
-        imgUrl: '',
+        imgUrl: 'images/ArtHall.png',
         links: [
-            'applications-for-participation.html',
-            'art-critic-profile.html',
-            'art-critics.html',
-            'art-dealer-profile.html',
-            'artist-profile.html',
-            'dealers.html',
-            'exhibition-space-profile.html',
-            'index.html',
-            'inserts.html',
-            'sign-up.html',
+
+            {
+                name: 'index.html',
+                url: 'https://torgomyan01.github.io/arthall/'
+            },
+            {
+                name: 'applications-for-participation.html',
+                url: 'https://torgomyan01.github.io/arthall/applications-for-participation.html'
+            },
+            {
+                name: 'art-critic-profile.html',
+                url: 'https://torgomyan01.github.io/arthall/art-critic-profile.html'
+            },
+            {
+                name: 'art-critics.html',
+                url: 'https://torgomyan01.github.io/arthall/art-critics.html'
+            },
+            {
+                name: 'art-dealer-profile.html',
+                url: 'https://torgomyan01.github.io/arthall/art-dealer-profile.html'
+            },
+            {
+                name: 'artist-profile.html',
+                url: 'https://torgomyan01.github.io/arthall/artist-profile.html'
+            },
+            {
+                name: 'dealers.html',
+                url: 'https://torgomyan01.github.io/arthall/dealers.html'
+            },
+            {
+                name: 'exhibition-space-profile.html',
+                url: 'https://torgomyan01.github.io/arthall/exhibition-space-profile.html'
+            },
+            {
+                name: 'inserts.html',
+                url: 'https://torgomyan01.github.io/arthall/inserts.html'
+            },
+            {
+                name: 'sign-up.html',
+                url: 'https://torgomyan01.github.io/arthall/sign-up.html'
+            },
 
         ],
-        created: 'HTML SCSS Bootstrap JAVASCRIPT'
-    },
-    {
-        name: "Arthall-Synergy",
-        imgUrl: '',
-        links: [
-            'index.html',
-
-        ],
-        created: 'HTML CSS JAVASCRIPT'
+        created: 'HTML SCSS Bootstrap JS'
     },
     {
         name: "Max-Asfalt",
-        imgUrl: '',
+        imgUrl: 'images/max-asfalt.png',
         links: [
-            'index.html',
+            {
+                name: 'index.html',
+                url: 'https://mir-darog.ru/'
+            }
 
         ],
         created: 'HTML CSS JAVASCRIPT'
     },
     {
         name: "Easy Card",
-        imgUrl: '',
+        imgUrl: 'images/EasyCards-Ru-Home.png',
         links: [
-            'index.html',
-            'bakai-card.html',
-            'freedom-card.html',
-            'kazakhstan.html',
-            'kirghizia.html',
-            'optimal-card.html',
-
+            {
+                name: 'index.html',
+                url: 'https://armanpinachyan.github.io/easyCard/'
+            },
+            {
+                name: 'bakai-card.html',
+                url: 'https://armanpinachyan.github.io/easyCard/bakai-card.html'
+            },
+            {
+                name: 'freedom-card.html',
+                url: 'https://armanpinachyan.github.io/easyCard/freedom-card.html'
+            },
+            {
+                name: 'kazakhstan.html',
+                url: 'https://armanpinachyan.github.io/easyCard/kazakhstan.html'
+            },
+            {
+                name: 'kirghizia.html',
+                url: 'https://armanpinachyan.github.io/easyCard/kirghizia.html'
+            },
+            {
+                name: 'optimal-card.html',
+                url: 'https://armanpinachyan.github.io/easyCard/optimal-card.html'
+            },
         ],
-        created: 'HTML CSS JAVASCRIPT'
+        created: 'HTML CSS JS JQUERY AOS-JS'
     },
     {
         name: "Neural-Network",
-        imgUrl: '',
+        imgUrl: 'images/Widgets.png',
         links: [
-            'index.html',
-            'widgets.html',
-            'Classification-of-skin-diseases.html',
-            'contacts.html',
-            'Definition-of-baggage-security.html',
-            'definition-of-hand-gestures.html',
-            'Detection-of-free-parking-spaces.html',
-            'fixing-the-movement-of-people.html',
-            'neural-network-capabilities.html',
-            'recognition-of-emotions-in-photo.html',
-            'Removing-people-from-a-video.html',
-            'Segmentation-bacteria-under-the-microscope.html',
-            'segmentation-of-people-in-the-photo.html',
-            'services.html',
-            'Trash-detection.html',
-            'widget.html'
+            {
+                name: 'index.html',
+                url: 'https://torgomyan01.github.io/neural-network/'
+            },
+            {
+                name: 'widgets.html',
+                url: 'https://torgomyan01.github.io/neural-network/widgets.html'
+            },
+            {
+                name: 'services.html',
+                url: 'https://torgomyan01.github.io/neural-network/services.html'
+            },
+            {
+                name: 'Trash-detection.html',
+                url: 'https://torgomyan01.github.io/Trash-detection.html'
+            },
+            {
+                name: 'widget.html',
+                url: 'https://torgomyan01.github.io/widget.html'
+            },
+            {
+                name: 'Classification-of-skin-diseases.html',
+                url: 'https://torgomyan01.github.io/neural-network/Classification-of-skin-diseases.html'
+            },
+            {
+                name: 'contacts.html',
+                url: 'https://torgomyan01.github.io/neural-network/contacts.html'
+            },
+            {
+                name: 'Definition-of-baggage-security.html',
+                url: 'https://torgomyan01.github.io/neural-network/Definition-of-baggage-security.html'
+            },
+            {
+                name: 'definition-of-hand-gestures.html',
+                url: 'https://torgomyan01.github.io/neural-network/definition-of-hand-gestures.html'
+            },
+            {
+                name: 'Detection-of-free-parking-spaces.html',
+                url: 'https://torgomyan01.github.io/neural-network/Detection-of-free-parking-spaces.html'
+            },
+            {
+                name: 'fixing-the-movement-of-people.html',
+                url: 'https://torgomyan01.github.io/neural-network/fixing-the-movement-of-people.html'
+            },
+            {
+                name: 'neural-network-capabilities.html',
+                url: 'https://torgomyan01.github.io/neural-network/neural-network-capabilities.html'
+            },
+            {
+                name: 'recognition-of-emotions-in-photo.html',
+                url: 'https://torgomyan01.github.io/neural-network/recognition-of-emotions-in-photo.html'
+            },
+            {
+                name: 'Removing-people-from-a-video.html',
+                url: 'https://torgomyan01.github.io/neural-network/Removing-people-from-a-video.html'
+            },
+            {
+                name: 'Segmentation-bacteria-under-the-microscope.html',
+                url: 'https://torgomyan01.github.io/neural-network/Segmentation-bacteria-under-the-microscope.html'
+            },
+            {
+                name: 'segmentation-of-people-in-the-photo.html',
+                url: 'https://torgomyan01.github.io/neural-network/segmentation-of-people-in-the-photo.html'
+            },
         ],
-        created: 'HTML CSS JAVASCRIPT'
+        created: 'HTML CSS JS JQUERY'
     },
     {
         name: "Kupon",
-        imgUrl: '',
+        imgUrl: 'images/Kupon.png',
         links: [
-            'index.html',
-            'product.html',
-            'sale.html',
+            {
+                name: 'index.html',
+                url: 'https://armanpinachyan.github.io/Kupon/'
+            },
+            {
+                name: 'product.html',
+                url: 'https://armanpinachyan.github.io/Kupon/product.html'
+            },
+            {
+                name: 'sale.html',
+                url: 'https://armanpinachyan.github.io/Kupon/sale.html'
+            },
         ],
-        created: 'HTML CSS JAVASCRIPT'
+        created: 'HTML CSS JS BOOTSTRAP'
     },
     {
         name: "Neuron",
-        imgUrl: '',
+        imgUrl: 'images/neuron.png',
         links: [
-            'index.html',
+            {
+                name: 'index.html',
+                url: 'https://torgomyan01.github.io/neuron/'
+            }
         ],
-        created: 'HTML CSS Bootstrap JAVASCRIPT'
-    },
-    {
-        name: "Neuron",
-        imgUrl: '',
-        links: [
-            'index.html',
-        ],
-        created: 'HTML CSS Bootstrap JAVASCRIPT'
+        created: 'HTML CSS JS BOOTSTRAP JS'
     },
     {
         name: "RosMigrant",
-        imgUrl: '',
+        imgUrl: 'images/ros-mirgrant.png',
         links: [
-            'index.html',
-            'news.html',
-            'wiframe.html',
+            {
+                name: 'index.html',
+                url: 'https://torgomyan01.github.io/RosMigrant/'
+            },
+            {
+                name: 'news.html',
+                url: 'https://torgomyan01.github.io/RosMigrant/news.html'
+            },
+            {
+                name: 'wiframe.html',
+                url: 'https://torgomyan01.github.io/RosMigrant/wiframe.html'
+            },
         ],
         created: 'HTML CSS Bootstrap JAVASCRIPT'
-    },
-    {
-        name: "Travel",
-        imgUrl: '',
-        links: [
-            'index.html',
-        ],
-        created: 'HTML CSS JAVASCRIPT'
     },
 ];
 
@@ -339,23 +494,11 @@ function PrintWorks (elem){
               <div class="works-box-pages-link">
                 <a class="github-link" href="#">${elem.name}</a>
                 <div class="link-box overflow-y-auto">
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
-                  <a class="link" href="#">index.html</a>
+                ${elem.links.map((link) => `<a class="link" target="_blank" href="${link.url}">${link.name}</a>`).join(' ')}
+                 
+              
                 </div>
-                <p class="page-about">HTML5 SCSS JS</p>
+                <p class="page-about">${elem.created}</p>
               </div>
             </div>
           </div>
